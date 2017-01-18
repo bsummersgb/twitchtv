@@ -1,0 +1,47 @@
+
+// Descriptive Colour Variables
+
+$white          : #fff;
+$black          : #000;
+$grey           : #878787;
+$regent-st-blue : #add8e6;
+$river-bed      : #48525c;
+$yellow-orange  : #ffa949;
+
+// Functional Colour Variables
+
+$colour-prim        : $yellow-orange;
+$colour-sec         : $river-bed;
+
+$colour-text-light  : $white;
+$colour-text-base   : $grey;
+$colour-text-dark   : $river-bed;
+
+$colour-border-light : lighten($grey, 35%);
+$colour-border-dark  : $yellow-orange;
+
+$colour-link-default : $yellow-orange;
+$colour-link-visited : $regent-st-blue;
+
+$colour-shadow       : rgba($black,.8);
+$colour-body         : $white;
+
+// Font Stacks
+
+// $stack-sans-serif   : Helvetica, Arial, sans-serif;
+// $stack-helvetica    : 'Helvetica-Neue', $stack-sans-serif;
+// $stack-abolition    : 'Abolition Regular', $stack-sans-serif;
+
+// Border Radius
+
+// $br: 10px;
+
+// Asset Paths
+
+// $path-img   : '../img/';
+// $path-font  : '../fonts/';
+
+// Media Query Breakpoints
+
+// $brk-narrow   : '(max-width: 768px)';
+// $brk-wide     : '(max-width: 1024px)';

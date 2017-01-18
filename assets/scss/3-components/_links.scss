@@ -1,0 +1,20 @@
+/* Pseudo-classes ------------------ */
+
+a {
+  &:link {
+    color: $colour-link-default;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: $colour-link-visited;
+  }
+
+  &:hover {
+    color: rgba($colour-link-default, .4);
+  }
+
+  &:active {
+    color: lightcoral;
+  }
+}
