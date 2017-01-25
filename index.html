@@ -11,9 +11,18 @@
   hello world
 
   <ul id="output">
-    <template id="list-template">
+    <template id="list-template-live">
       <a href="{{url}}" target="_blank">
-        <li>
+        <li class="all live">
+          <p><strong>{{name}}</strong></p>
+          <p>{{program}}</p>
+          <p><img src="{{logo}}" alt="{{name}} logo"></p>
+        </li>
+      </a>
+    </template>
+    <template id="list-template-not-live">
+      <a href="{{url}}" target="_blank">
+        <li class="all not-live">
           <p><strong>{{name}}</strong></p>
           <p><img src="{{logo}}" alt="{{name}} logo"></p>
         </li>
