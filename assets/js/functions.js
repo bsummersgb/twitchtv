@@ -4,7 +4,7 @@
   var listTemplateLive = $('#list-template-live').html();
   var listTemplateNotLive = $('#list-template-not-live').html();
 
-  var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+  var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "brunofin", "comster404"];
   var arrOfPromises = [];
 
 
@@ -28,12 +28,19 @@
                     dataType: 'jsonp'
                 }).then(function(channelData) {
                     console.log(channelData);
+                    if (channelData.error) {
+                      return {
+                        name: channelData.message,
+                        logo: "http://www.hsdtaxlaw.com/wp-content/uploads/2016/05/20140806_LogoSupporterPlaceholder.png"
+                      };
+                    } else {
                     return {
                         name: channelData.display_name,
                         url: channelData.url,
                         logo: channelData.logo,
                         streaming: null
                     };
+                    }
                 });
             }
         });
@@ -57,6 +64,11 @@
       $ul.append(Mustache.render(template, stream));
     }
 
+  /* DELETED CHANNELS
+    if (error) then 'channelName' does not exist
+
+  */
+
 
     /*
       - .when(arrOfPromises) would not work because the.when() function requires a promise for its argument. arrOfPromises is simply an Array
@@ -67,59 +79,23 @@
 
     */
 
-    // console.log("test for status", allStreams[6].status);
+    // $.ajax({
+    //   url: 'https://wind-bow.gomix.me/twitch-api/channels/freecodecamp',
+    //   dataType: 'jsonp',
+    //   success: function(data){
+    //     console.log(data);
+    //   }
+    // });
+    //
+    // $.ajax({
+    //   url: 'https://wind-bow.gomix.me/twitch-api/channels/brunofin',
+    //   dataType: 'jsonp',
+    //   success: function(data){
+    //     console.log(data);
+    //   }
+    // });
 
 
-
-
-
-
-
-  // $.each(channels, function(i, channelName){
-  //   var xhr = $.ajax({
-  //     url: 'https://wind-bow.gomix.me/twitch-api/streams/' + channelName,
-  //     dataType: 'jsonp',
-  //     success: function(data) {
-  //
-  //       if (data.stream) { // i.e. if it's not null and currently streaming
-  //         allStreams[i] = {
-  //           name: data.stream.channel.display_name,
-  //           url: data.stream.channel.url,
-  //           logo: data.stream.channel.logo,
-  //           status: data.stream
-  //         };
-  //       } else { // i.e. it's not currently streaming, do a separate request to get the channel info.
-  //         $.ajax({
-  //           url: 'https://wind-bow.gomix.me/twitch-api/channels/' + channelName,
-  //           dataType: 'jsonp',
-  //           success: function(channelData) {
-  //             allStreams[i] = {
-  //               name: channelData.display_name,
-  //               url: channelData.url,
-  //               logo: channelData.logo
-  //             };
-  //           } // close inner success
-  //         }); // close inner $.ajax()
-  //       } // close else
-  //     } // close outer success
-  //   }); // close outer $.ajax()
-  //   arr.push(xhr);
-  //
-  //
-  // }); // close $.each()
-  //
-  // console.log(allStreams);
-  //
-  // $.when.apply($, arr).then(function(){
-  //   $.each(allStreams, function(i, stream) {
-  //     $ul.append(Mustache.render(listTemplate, stream));
-  //   });
-  // });
-
-/* deleted accounts
-  - brunofin
-  - comster404
-*/
 
 
 
