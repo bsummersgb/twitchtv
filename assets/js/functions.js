@@ -50,7 +50,7 @@
 
     $.when.apply($, arrOfPromises).then(function() {
         console.log(arguments); // the arguments are such because they are passed into the 'then' function when all promises in arrOfPromises are resolved
-        var allStreams = [].slice.call(arguments);console.log("args: ",arguments); console.log("allstr: ",allStreams)
+        var allStreams = [].slice.call(arguments);console.log("args: ",arguments); console.log("allstr: ", allStreams)
         $.each(allStreams, function(i, stream) {
           if (stream.streaming) {
             renderList(listTemplateLive, stream);
@@ -64,10 +64,25 @@
       $ul.append(Mustache.render(template, stream));
     }
 
-  /* DELETED CHANNELS
-    if (error) then 'channelName' does not exist
 
-  */
+    $('button[name="show-live"]').on('click', function() {
+      $('.not-live').toggleClass("hide");
+    });
+
+    $('button[name="show-inactive"]').on('click', function() {
+      $('.live').toggleClass("hide");
+    });
+
+    $('button[name="show-all"]').on('click', function() {
+      $('.live').removeClass("hide");
+      $('.not-live').removeClass("hide");
+
+    });
+
+
+
+
+
 
 
     /*
