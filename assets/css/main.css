@@ -314,6 +314,50 @@ input[type="button"]:focus {
   outline: 0;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: 1% auto;
+}
+
+#tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+#tabs button {
+  flex: 1;
+}
+
+ul {
+  padding-left: 0;
+}
+
+ul li {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.channel-name {
+  margin-top: 2.5em;
+  margin-left: 1em;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 7em;
+  height: 7em;
+}
+
+.program {
+  position: absolute;
+  top: 33%;
+  left: 17%;
+}
+
 .hide {
   display: none;
 }

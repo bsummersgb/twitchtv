@@ -79,6 +79,19 @@
 
     });
 
+    // $('#live').on('click', function() {
+    //   $('.not-live').toggleClass("hide");
+    // });
+    //
+    // $('#inactive').on('click', function() {
+    //   $('.live').toggleClass("hide");
+    // });
+    //
+    // $('#all').on('click', function() {
+    //   $('.live').removeClass("hide");
+    //   $('.not-live').removeClass("hide");
+    // });
+
 
 
 
