@@ -18,11 +18,18 @@ main {
 
 ul {
   padding-left: 0;
+  background-color: gray;
+  margin-top: 0;
   li {
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    padding-left: 1.5em;
   }
+}
+
+.active-button {
+  background-color: gray !important;
 }
 
 %triangle { // if a button has a class of active, then attach this as a pseudo :after element to the button
@@ -51,6 +58,10 @@ ul {
   position: absolute;
   top: 33%;
   left: 17%;
+}
+
+.tab {
+  background-color: orange;
 }
 
 .hide {

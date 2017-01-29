@@ -60,6 +60,7 @@
         });
     });
 
+    // Allows you to pass in a template and render it 
     function renderList(template, stream) {
       $ul.append(Mustache.render(template, stream));
     }
@@ -68,36 +69,24 @@
     $('button[name="show-live"]').on('click', function() {
       $('.live').removeClass("hide");
       $('.not-live').addClass("hide");
+      $('.tab').removeClass("active-button");
+      $(this).addClass("active-button");
     });
 
     $('button[name="show-inactive"]').on('click', function() {
       $('.not-live').removeClass("hide");
       $('.live').addClass("hide");
+      $('.tab').removeClass("active-button");
+      $(this).addClass("active-button");
     });
 
     $('button[name="show-all"]').on('click', function() {
       $('.live').removeClass("hide");
       $('.not-live').removeClass("hide");
+      $('.tab').removeClass("active-button");
+      $(this).addClass("active-button");
 
     });
-
-    // $('#live').on('click', function() {
-    //   $('.not-live').toggleClass("hide");
-    // });
-    //
-    // $('#inactive').on('click', function() {
-    //   $('.live').toggleClass("hide");
-    // });
-    //
-    // $('#all').on('click', function() {
-    //   $('.live').removeClass("hide");
-    //   $('.not-live').removeClass("hide");
-    // });
-
-
-
-
-
 
 
     /*
@@ -108,25 +97,5 @@
       on it.
 
     */
-
-    // $.ajax({
-    //   url: 'https://wind-bow.gomix.me/twitch-api/channels/freecodecamp',
-    //   dataType: 'jsonp',
-    //   success: function(data){
-    //     console.log(data);
-    //   }
-    // });
-    //
-    // $.ajax({
-    //   url: 'https://wind-bow.gomix.me/twitch-api/channels/brunofin',
-    //   dataType: 'jsonp',
-    //   success: function(data){
-    //     console.log(data);
-    //   }
-    // });
-
-
-
-
 
 }); // close .ready()
