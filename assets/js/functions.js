@@ -66,11 +66,13 @@
 
 
     $('button[name="show-live"]').on('click', function() {
-      $('.not-live').toggleClass("hide");
+      $('.live').removeClass("hide");
+      $('.not-live').addClass("hide");
     });
 
     $('button[name="show-inactive"]').on('click', function() {
-      $('.live').toggleClass("hide");
+      $('.not-live').removeClass("hide");
+      $('.live').addClass("hide");
     });
 
     $('button[name="show-all"]').on('click', function() {
