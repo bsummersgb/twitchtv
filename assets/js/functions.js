@@ -31,7 +31,7 @@
                     if (channelData.error) {
                       return {
                         name: channelData.message,
-                        logo: "http://www.hsdtaxlaw.com/wp-content/uploads/2016/05/20140806_LogoSupporterPlaceholder.png"
+                        logo: "/twitchtv/assets/img/logoPlaceholder.png"
                       };
                     } else {
                     return {
@@ -60,7 +60,7 @@
         });
     });
 
-    // Allows you to pass in a template and render it 
+    // Allows you to pass in a template and render it
     function renderList(template, stream) {
       $ul.append(Mustache.render(template, stream));
     }
